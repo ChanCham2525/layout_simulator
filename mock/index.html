@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>レイアウト シミュレーター（仮）</title>
+  <link rel="stylesheet" href="stylesheet/index.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <h1>レイアウトシミュレーター（仮）</h1>
+    <div class="form">
+      <div> カンプ画像：<input type="file" name="comp" id="comp">
+      </div>
+      <div id="test"></div>
+      <div> コンテンツ幅：<input type="number" name="contentWidth" id="contentWidth">
+      </div>
+      <div> 必要とする左右余白：<input type="number" name="sideMargin" id="sideMargin">
+      </div>
+      <div> 大画面でのレイアウト型： <label><input type="radio" name="largeLayout" value="fix">フィックス型</label>
+        <label><input type="radio" name="largeLayout" value="2">フルスクリーン型</label>
+      </div>
+      <div> 小画面でのレイアウト型： <label><input type="radio" name="middleLayout" value="overflow">はみ出し型</label>
+        <label><input type="radio" name="middleLayout" value="aspectfix">アスペクト比固定型</label>
+      </div>
+      <button type="button">シミュレート</button>
+      <input type="reset">
+    </div>
+  </div>
+  <script src="script/index.js" defer></script>
+</body>
+
+</html>

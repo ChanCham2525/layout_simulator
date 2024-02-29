@@ -1,0 +1,147 @@
+@charset 'UTF-8';
+
+/* ============================================================
+
+    base
+
+============================================================ */
+
+/* ============================================================
+
+    layout
+
+============================================================ */
+
+/* header
+------------------------------------------------------------ */
+.l-header {
+}
+
+.l-header_logo {
+}
+
+.l-header_globalMenu {
+}
+
+/* footer
+------------------------------------------------------------ */
+.l-footer {
+}
+
+.l-footer_logo {
+}
+
+.l-footer_text {
+}
+
+.l-footer_menu {
+}
+
+.l-footer_menu_item {
+}
+
+.l-footer_menu_button {
+}
+
+.l-footer_copyright {
+}
+
+/* ============================================================
+
+    component
+
+============================================================ */
+
+/* main visual
+------------------------------------------------------------ */
+.c-mainVisual {
+}
+
+.c-mainVisual_title {
+}
+
+.c-mainVisual_sub {
+}
+
+/* lead
+------------------------------------------------------------ */
+.c-lead {
+}
+
+.c-lead_heading {
+}
+
+.c-lead_text {
+}
+
+/* description
+------------------------------------------------------------ */
+.c-description {
+}
+
+.c-description_heading {
+}
+
+.c-description_figure {
+}
+
+.c-description_figure_image {
+}
+
+.c-description_text {
+}
+
+/* grid contents
+------------------------------------------------------------ */
+.c-gridContents {
+}
+
+.c-gridContents_list {
+}
+
+.c-gridContents_list_item {
+}
+
+.c-gridContents_list_term {
+}
+
+.c-gridContents_list_desc {
+}
+
+.c-gridContents_list_thumb {
+}
+
+.c-gridContents_list_thumb_image {
+}
+
+/* other sample
+------------------------------------------------------------ */
+.c-otherSample {
+}
+
+.c-otherSample_heading {
+}
+
+.c-otherSample_list {
+}
+
+.c-otherSample_list_item {
+}
+
+.c-otherSample_list_link {
+}
+
+.c-otherSample_list_term {
+}
+
+.c-otherSample_list_desc {
+}
+
+.c-otherSample_list_tags {
+}
+
+.c-otherSample_tags {
+}
+
+.c-otherSample_tags_item {
+}

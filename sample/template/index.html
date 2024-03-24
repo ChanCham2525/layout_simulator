@@ -7,155 +7,175 @@
   <title>○○型レイアウト</title>
   <link rel="stylesheet" href="../stylesheet/reset.css">
   <link rel="stylesheet" href="../stylesheet/common.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header class="l-header">
-    <p class="l-header_logo">レイアウトサンプル集</p>
-    <ul class="l-header_globalMenu">
-      <li><a href="#">メニュー1</a></li>
-      <li><a href="#">メニュー2</a></li>
-      <li><a href="#">メニュー3</a></li>
-      <li><a href="#">メニュー4</a></li>
-    </ul>
+    <div class="l-header_inner p-inner">
+      <p class="l-header_logo">レイアウトサンプル集</p>
+      <ul class="l-header_globalMenu">
+        <li class="l-header_globalMenu_item"><a href="#" class="l-header_globalMenu_button">メニュー1</a></li>
+        <li class="l-header_globalMenu_item"><a href="#" class="l-header_globalMenu_button">メニュー2</a></li>
+        <li class="l-header_globalMenu_item"><a href="#" class="l-header_globalMenu_button">メニュー3</a></li>
+        <li class="l-header_globalMenu_item"><a href="#" class="l-header_globalMenu_button">メニュー4</a></li>
+      </ul>
+    </div>
   </header>
 
   <div class="c-mainVisual">
-    <h1 class="c-mainVisual_title">○○型レイアウト</h1>
-    <p class="c-mainVisual_sub">現在の画面幅は<span>##</span>pxです。</p>
+    <div class="c-mainVisual_inner p-inner">
+      <h1 class="c-mainVisual_title">○○型レイアウト</h1>
+      <p class="c-mainVisual_sub">現在の画面幅は<span>##</span>pxです。</p>
+    </div>
   </div>
 
-  <section class="c-lead">
-    <h2 class="c-lead_heading">リード</h2>
-    <div class="c-lead_text">
-      <p>このページは○○型レイアウトのサンプルです。</p>
-      <p>○○型レイアウトのポイントは○○であることです。</p>
-      <p>○○であることがメリットである一方で、○○であるデメリットも存在します。</p>
+  <section class="c-lead c-sectionWrap">
+    <div class="c-lead_inner p-inner">
+      <h2 class="c-lead_heading c-sectionHeading">リード</h2>
+      <div class="c-lead_text">
+        <p>このページは○○型レイアウトのサンプルです。</p>
+        <p>○○型レイアウトのポイントは○○であることです。</p>
+        <p>○○であることがメリットである一方で、○○であるデメリットも存在します。</p>
+      </div>
     </div>
   </section>
 
-  <section class="c-description">
-    <h2 class="c-description_heading">なんか図と説明</h2>
-    <p class="c-description_figure"><img src="https://placehold.jp/14/f2f2f2/333/400x300.png?text=%E3%81%AA%E3%82%93%E3%81%8B%E8%AA%AC%E6%98%8E%E3%81%97%E3%81%A6%E3%81%9D%E3%81%86%E3%81%AA%E5%9B%B3" alt="なにか説明してそうな図" class="c-description_figure_image"></p>
-    <p class="c-description_text">なんか説明してそうなテキストがここに入ります。<br>山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。住みにくさが高じると、安い所へ引き越したくなる。どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。</p>
+  <section class="c-description c-sectionWrap">
+    <div class="c-description_inner p-inner">
+      <h2 class="c-description_heading c-sectionHeading">なんか図と説明</h2>
+      <div class="c-description_content">
+        <p class="c-description_figure"><img src="https://picsum.photos/400/300.webp" alt="なにか説明してそうな図" width="400" height="300" class="c-description_figure_image"></p>
+        <div class="c-description_text">
+          <p>なんか説明してそうなテキストがここに入ります。</p>
+          <p>山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。住みにくさが高じると、安い所へ引き越したくなる。どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。</p>
+          <p>山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。住みにくさが高じると、安い所へ引き越したくなる。どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section class="c-gridContents">
-    <h2>なんかコンテンツリスト</h2>
-    <dl class="c-gridContents_list">
-      <div class="c-gridContents_list_item">
-        <dt class="c-gridContents_list_term">なんかコンテンツ</dt>
-        <dd class="c-gridContents_list_desc">それっぽい説明テキストがそれなりの長さで入ります。</dd>
-        <dd class="c-gridContents_list_thumb"><img src="https://placehold.jp/14/f2f2f2/333/200x200.png" alt="" class="c-gridContents_list_thumb_image"></dd>
-      </div>
-      <div class="c-gridContents_list_item">
-        <dt class="c-gridContents_list_term">なんかコンテンツ</dt>
-        <dd class="c-gridContents_list_desc">それっぽい説明テキストがそれなりの長さで入ります。</dd>
-        <dd class="c-gridContents_list_thumb"><img src="https://placehold.jp/14/f2f2f2/333/200x200.png" alt="" class="c-gridContents_list_thumb_image"></dd>
-      </div>
-      <div class="c-gridContents_list_item">
-        <dt class="c-gridContents_list_term">なんかコンテンツ</dt>
-        <dd class="c-gridContents_list_desc">それっぽい説明テキストがそれなりの長さで入ります。</dd>
-        <dd class="c-gridContents_list_thumb"><img src="https://placehold.jp/14/f2f2f2/333/200x200.png" alt="" class="c-gridContents_list_thumb_image"></dd>
-      </div>
-      <div class="c-gridContents_list_item">
-        <dt class="c-gridContents_list_term">なんかコンテンツ</dt>
-        <dd class="c-gridContents_list_desc">それっぽい説明テキストがそれなりの長さで入ります。</dd>
-        <dd class="c-gridContents_list_thumb"><img src="https://placehold.jp/14/f2f2f2/333/200x200.png" alt="" class="c-gridContents_list_thumb_image"></dd>
-      </div>
-      <div class="c-gridContents_list_item">
-        <dt class="c-gridContents_list_term">なんかコンテンツ</dt>
-        <dd class="c-gridContents_list_desc">それっぽい説明テキストがそれなりの長さで入ります。</dd>
-        <dd class="c-gridContents_list_thumb"><img src="https://placehold.jp/14/f2f2f2/333/200x200.png" alt="" class="c-gridContents_list_thumb_image"></dd>
-      </div>
-      <div class="c-gridContents_list_item">
-        <dt class="c-gridContents_list_term">なんかコンテンツ</dt>
-        <dd class="c-gridContents_list_desc">それっぽい説明テキストがそれなりの長さで入ります。</dd>
-        <dd class="c-gridContents_list_thumb"><img src="https://placehold.jp/14/f2f2f2/333/200x200.png" alt="" class="c-gridContents_list_thumb_image"></dd>
-      </div>
-      <div class="c-gridContents_list_item">
-        <dt class="c-gridContents_list_term">なんかコンテンツ</dt>
-        <dd class="c-gridContents_list_desc">それっぽい説明テキストがそれなりの長さで入ります。</dd>
-        <dd class="c-gridContents_list_thumb"><img src="https://placehold.jp/14/f2f2f2/333/200x200.png" alt="" class="c-gridContents_list_thumb_image"></dd>
-      </div>
-      <div class="c-gridContents_list_item">
-        <dt class="c-gridContents_list_term">なんかコンテンツ</dt>
-        <dd class="c-gridContents_list_desc">それっぽい説明テキストがそれなりの長さで入ります。</dd>
-        <dd class="c-gridContents_list_thumb"><img src="https://placehold.jp/14/f2f2f2/333/200x200.png" alt="" class="c-gridContents_list_thumb_image"></dd>
-      </div>
-      <div class="c-gridContents_list_item">
-        <dt class="c-gridContents_list_term">なんかコンテンツ</dt>
-        <dd class="c-gridContents_list_desc">それっぽい説明テキストがそれなりの長さで入ります。</dd>
-        <dd class="c-gridContents_list_thumb"><img src="https://placehold.jp/14/f2f2f2/333/200x200.png" alt="" class="c-gridContents_list_thumb_image"></dd>
-      </div>
-    </dl>
+  <section class="c-gridContents c-sectionWrap">
+    <div class="c-gridContents_inner p-inner">
+      <h2 class="c-gridContents_heading c-sectionHeading">なんかコンテンツリスト</h2>
+      <!-- https://picsum.photos/v2/list?limit=8 -->
+      <dl class="c-gridContents_list">
+        <div class="c-gridContents_list_item">
+          <dt class="c-gridContents_list_term">なんかコンテンツ</dt>
+          <dd class="c-gridContents_list_desc">それっぽい説明テキストがそれなりの長さで入ります。</dd>
+          <dd class="c-gridContents_list_thumb"><img src="https://picsum.photos/400.webp" alt="" width="400" height="400" class="c-gridContents_list_thumb_image"></dd>
+        </div>
+        <div class="c-gridContents_list_item">
+          <dt class="c-gridContents_list_term">なんかコンテンツ</dt>
+          <dd class="c-gridContents_list_desc">それっぽい説明テキストがそれなりの長さで入ります。</dd>
+          <dd class="c-gridContents_list_thumb"><img src="https://picsum.photos/400.webp" alt="" width="400" height="400" class="c-gridContents_list_thumb_image"></dd>
+        </div>
+        <div class="c-gridContents_list_item">
+          <dt class="c-gridContents_list_term">なんかコンテンツ</dt>
+          <dd class="c-gridContents_list_desc">それっぽい説明テキストがそれなりの長さで入ります。</dd>
+          <dd class="c-gridContents_list_thumb"><img src="https://picsum.photos/400.webp" alt="" width="400" height="400" class="c-gridContents_list_thumb_image"></dd>
+        </div>
+        <div class="c-gridContents_list_item">
+          <dt class="c-gridContents_list_term">なんかコンテンツ</dt>
+          <dd class="c-gridContents_list_desc">それっぽい説明テキストがそれなりの長さで入ります。</dd>
+          <dd class="c-gridContents_list_thumb"><img src="https://picsum.photos/400.webp" alt="" width="400" height="400" class="c-gridContents_list_thumb_image"></dd>
+        </div>
+        <div class="c-gridContents_list_item">
+          <dt class="c-gridContents_list_term">なんかコンテンツ</dt>
+          <dd class="c-gridContents_list_desc">それっぽい説明テキストがそれなりの長さで入ります。</dd>
+          <dd class="c-gridContents_list_thumb"><img src="https://picsum.photos/400.webp" alt="" width="400" height="400" class="c-gridContents_list_thumb_image"></dd>
+        </div>
+        <div class="c-gridContents_list_item">
+          <dt class="c-gridContents_list_term">なんかコンテンツ</dt>
+          <dd class="c-gridContents_list_desc">それっぽい説明テキストがそれなりの長さで入ります。</dd>
+          <dd class="c-gridContents_list_thumb"><img src="https://picsum.photos/400.webp" alt="" width="400" height="400" class="c-gridContents_list_thumb_image"></dd>
+        </div>
+        <div class="c-gridContents_list_item">
+          <dt class="c-gridContents_list_term">なんかコンテンツ</dt>
+          <dd class="c-gridContents_list_desc">それっぽい説明テキストがそれなりの長さで入ります。</dd>
+          <dd class="c-gridContents_list_thumb"><img src="https://picsum.photos/400.webp" alt="" width="400" height="400" class="c-gridContents_list_thumb_image"></dd>
+        </div>
+        <div class="c-gridContents_list_item">
+          <dt class="c-gridContents_list_term">なんかコンテンツ</dt>
+          <dd class="c-gridContents_list_desc">それっぽい説明テキストがそれなりの長さで入ります。</dd>
+          <dd class="c-gridContents_list_thumb"><img src="https://picsum.photos/400.webp" alt="" width="400" height="400" class="c-gridContents_list_thumb_image"></dd>
+        </div>
+      </dl>
+    </div>
   </section>
 
-  <section class="c-otherSample">
-    <h2 class="c-otherSample_heading">他のサンプルを見る</h2>
-    <dl class="c-otherSample_list">
-      <div class="c-otherSample_list_item">
-        <a href="#" class="c-otherSample_list_link">
-          <dt class="c-otherSample_list_term">○○型レイアウト</dt>
-          <dd class="c-otherSample_list_desc">○○型レイアウトのポイントは○○であることです。...</dd>
-          <dd class="c-otherSample_list_tags">
-            <ul class="c-otherSample_tags">
-              <li class="c-otherSample_tags_item">#PC向け</li>
-              <li class="c-otherSample_tags_item">#画面が大きいとき向け</li>
-            </ul>
-          </dd>
-        </a>
-      </div>
-      <div class="c-otherSample_list_item">
-        <a href="#" class="c-otherSample_list_link">
-          <dt class="c-otherSample_list_term">○○型レイアウト</dt>
-          <dd class="c-otherSample_list_desc">○○型レイアウトのポイントは○○であることです。...</dd>
-          <dd class="c-otherSample_list_tags">
-            <ul class="c-otherSample_tags">
-              <li class="c-otherSample_tags_item">#PC向け</li>
-              <li class="c-otherSample_tags_item">#画面が大きいとき向け</li>
-            </ul>
-          </dd>
-        </a>
-      </div>
-      <div class="c-otherSample_list_item">
-        <a href="#" class="c-otherSample_list_link">
-          <dt class="c-otherSample_list_term">○○型レイアウト</dt>
-          <dd class="c-otherSample_list_desc">○○型レイアウトのポイントは○○であることです。...</dd>
-          <dd class="c-otherSample_list_tags">
-            <ul class="c-otherSample_tags">
-              <li class="c-otherSample_tags_item">#PC向け</li>
-              <li class="c-otherSample_tags_item">#画面が大きいとき向け</li>
-            </ul>
-          </dd>
-        </a>
-      </div>
-      <div class="c-otherSample_list_item">
-        <a href="#" class="c-otherSample_list_link">
-          <dt class="c-otherSample_list_term">○○型レイアウト</dt>
-          <dd class="c-otherSample_list_desc">○○型レイアウトのポイントは○○であることです。...</dd>
-          <dd class="c-otherSample_list_tags">
-            <ul class="c-otherSample_tags">
-              <li class="c-otherSample_tags_item">#PC向け</li>
-              <li class="c-otherSample_tags_item">#画面が大きいとき向け</li>
-            </ul>
-          </dd>
-        </a>
-      </div>
-    </dl>
+  <section class="c-otherSample c-sectionWrap">
+    <div class="c-otherSample_inner p-inner">
+      <h2 class="c-otherSample_heading c-sectionHeading">他のサンプルを見る</h2>
+      <dl class="c-otherSample_list">
+        <div class="c-otherSample_list_item">
+          <a href="#" class="c-otherSample_list_link">
+            <dt class="c-otherSample_list_term">○○型レイアウト</dt>
+            <dd class="c-otherSample_list_desc">○○型レイアウトのポイントは○○であることです。...</dd>
+            <dd class="c-otherSample_list_tags">
+              <ul class="c-otherSample_tags">
+                <li class="c-otherSample_tags_item">#PC向け</li>
+                <li class="c-otherSample_tags_item">#画面が大きいとき向け</li>
+              </ul>
+            </dd>
+          </a>
+        </div>
+        <div class="c-otherSample_list_item">
+          <a href="#" class="c-otherSample_list_link">
+            <dt class="c-otherSample_list_term">○○型レイアウト</dt>
+            <dd class="c-otherSample_list_desc">○○型レイアウトのポイントは○○であることです。...</dd>
+            <dd class="c-otherSample_list_tags">
+              <ul class="c-otherSample_tags">
+                <li class="c-otherSample_tags_item">#PC向け</li>
+                <li class="c-otherSample_tags_item">#画面が大きいとき向け</li>
+              </ul>
+            </dd>
+          </a>
+        </div>
+        <div class="c-otherSample_list_item">
+          <a href="#" class="c-otherSample_list_link">
+            <dt class="c-otherSample_list_term">○○型レイアウト</dt>
+            <dd class="c-otherSample_list_desc">○○型レイアウトのポイントは○○であることです。...</dd>
+            <dd class="c-otherSample_list_tags">
+              <ul class="c-otherSample_tags">
+                <li class="c-otherSample_tags_item">#PC向け</li>
+                <li class="c-otherSample_tags_item">#画面が大きいとき向け</li>
+              </ul>
+            </dd>
+          </a>
+        </div>
+        <div class="c-otherSample_list_item">
+          <a href="#" class="c-otherSample_list_link">
+            <dt class="c-otherSample_list_term">○○型レイアウト</dt>
+            <dd class="c-otherSample_list_desc">○○型レイアウトのポイントは○○であることです。...</dd>
+            <dd class="c-otherSample_list_tags">
+              <ul class="c-otherSample_tags">
+                <li class="c-otherSample_tags_item">#PC向け</li>
+                <li class="c-otherSample_tags_item">#画面が大きいとき向け</li>
+              </ul>
+            </dd>
+          </a>
+        </div>
+      </dl>
+    </div>
   </section>
 
   <footer class="l-footer">
-    <p class="l-footer_logo">レイアウトサンプル集</p>
-    <p class="l-footer_text">このページは社内向け資料のサンプルとして作られました。<br>ご不明な点は思い当たる担当者までお問い合わせください。</p>
-    <ul class="l-footer_menu">
-      <li class="l-footer_menu_item"><a href="#" class="l-footer_menu_button">サブメニュー1</a></li>
-      <li class="l-footer_menu_item"><a href="#" class="l-footer_menu_button">サブメニュー2</a></li>
-      <li class="l-footer_menu_item"><a href="#" class="l-footer_menu_button">サブメニュー3</a></li>
-      <li class="l-footer_menu_item"><a href="#" class="l-footer_menu_button">サブメニュー4</a></li>
-      <li class="l-footer_menu_item"><a href="#" class="l-footer_menu_button">サブメニュー5</a></li>
-      <li class="l-footer_menu_item"><a href="#" class="l-footer_menu_button">サブメニュー6</a></li>
-    </ul>
+    <div class="l-footer_inner p-inner">
+      <p class="l-footer_logo">レイアウトサンプル集</p>
+      <p class="l-footer_text">このページは社内向け資料のサンプルとして作られました。<br>ご不明な点は思い当たる担当者までお問い合わせください。</p>
+      <ul class="l-footer_menu">
+        <li class="l-footer_menu_item"><a href="#" class="l-footer_menu_button">サブメニュー1</a></li>
+        <li class="l-footer_menu_item"><a href="#" class="l-footer_menu_button">サブメニュー2</a></li>
+        <li class="l-footer_menu_item"><a href="#" class="l-footer_menu_button">サブメニュー3</a></li>
+        <li class="l-footer_menu_item"><a href="#" class="l-footer_menu_button">サブメニュー4</a></li>
+        <li class="l-footer_menu_item"><a href="#" class="l-footer_menu_button">サブメニュー5</a></li>
+        <li class="l-footer_menu_item"><a href="#" class="l-footer_menu_button">サブメニュー6</a></li>
+      </ul>
+    </div>
     <p class="l-footer_copyright">Copyright &copy; Sample Example Co., All Rights Reserved.</p>
   </footer>
 </body>

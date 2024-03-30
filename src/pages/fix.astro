@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/fix.scss';
+
+const pageData = {
+  title: 'フィックス型レイアウト',
+  descriptions: ['このページはフィックス型レイアウトのサンプルです。', 'フィックス型レイアウトのポイントはコンテンツの幅が固定されていることです。', '○○であることがメリットである一方で、○○であるデメリットも存在します。'],
+};
+---
+
+<BaseLayout pageData={pageData} />

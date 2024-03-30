@@ -1,0 +1,212 @@
+---
+import '../styles/reset.scss';
+import '../styles/common.scss';
+
+const { pageData } = Astro.props;
+const photosData = await fetch('https://picsum.photos/v2/list?limit=8&page=18').then((r) => r.json());
+---
+
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{pageData.title}</title>
+    <meta name="description" content={pageData.descriptions.map((description) => description)} />
+
+    <style>
+      body {
+        font-family: 'Noto Sans', 'Noto Sans JP', sans-serif;
+      }
+
+      @font-face {
+        src:
+          url('/fonts/NotoSansJP-Regular.woff') format('woff'),
+          url('/fonts/NotoSansJP-Regular.ttf') format('truetype');
+        font-family: 'Noto Sans JP';
+        font-weight: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        src:
+          url('/fonts/NotoSansJP-Bold.woff') format('woff'),
+          url('/fonts/NotoSansJP-Bold.ttf') format('truetype');
+        font-family: 'Noto Sans JP';
+        font-weight: bold;
+        font-display: swap;
+      }
+
+      @font-face {
+        src:
+          url('/fonts/NotoSans-Regular.woff') format('woff'),
+          url('/fonts/NotoSans-Regular.ttf') format('truetype');
+        font-family: 'Noto Sans';
+        font-weight: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        src:
+          url('/fonts/NotoSans-Bold.woff') format('woff'),
+          url('/fonts/NotoSans-Bold.ttf') format('truetype');
+        font-family: 'Noto Sans';
+        font-weight: bold;
+        font-display: swap;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="l-header">
+      <div class="l-header_inner p-inner">
+        <p class="l-header_logo">レイアウトサンプル集</p>
+        <ul class="l-header_globalMenu">
+          <li class="l-header_globalMenu_item"><a href="#" class="l-header_globalMenu_button">メニュー1</a></li>
+          <li class="l-header_globalMenu_item"><a href="#" class="l-header_globalMenu_button">メニュー2</a></li>
+          <li class="l-header_globalMenu_item"><a href="#" class="l-header_globalMenu_button">メニュー3</a></li>
+          <li class="l-header_globalMenu_item"><a href="#" class="l-header_globalMenu_button">メニュー4</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="c-mainVisual">
+      <div class="c-mainVisual_inner p-inner">
+        <h1 class="c-mainVisual_title">{pageData.title}</h1>
+        <p class="c-mainVisual_sub">現在の画面幅は<span id="windowWidth">##</span>pxです。</p>
+      </div>
+      <div class="c-mainVisual_background"><img src="/images/1920x720.webp" decoding="sync" alt="" width="1920" height="720" class="c-mainVisual_background_image" /></div>
+      <!-- https://fastly.picsum.photos/id/1020/1920/720.webp?hmac=wZJv9gGi41oFdAA-2-yaJCZTabX0C1RLfYygS7SAJE8 -->
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const displayWindowWidth = () => {
+            const $windowWidth = document.getElementById('windowWidth');
+            const ww = window.innerWidth;
+            $windowWidth.innerText = String(ww);
+          };
+
+          // 初回
+          displayWindowWidth();
+
+          // リサイズ時
+          window.addEventListener('resize', () => {
+            displayWindowWidth();
+          });
+        });
+      </script>
+    </div>
+
+    <section class="c-lead c-sectionWrap">
+      <div class="c-lead_inner p-inner">
+        <h2 class="c-lead_heading c-sectionHeading">{pageData.title}とは</h2>
+        <div class="c-lead_text">
+          {pageData.descriptions.map((description) => <p>{description}</p>)}
+        </div>
+      </div>
+    </section>
+
+    <section class="c-description c-sectionWrap">
+      <div class="c-description_inner p-inner">
+        <h2 class="c-description_heading c-sectionHeading">なんか図と説明</h2>
+        <div class="c-description_content">
+          <p class="c-description_figure"><img src="https://picsum.photos/400/300.webp" decoding="async" alt="なにか説明してそうな図" width="400" height="300" class="c-description_figure_image" /></p>
+          <div class="c-description_text">
+            <p>なんか説明してそうなテキストがここに入ります。</p>
+            <p>山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。住みにくさが高じると、安い所へ引き越したくなる。どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。</p>
+            <p>山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。住みにくさが高じると、安い所へ引き越したくなる。どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="c-gridContents c-sectionWrap">
+      <div class="c-gridContents_inner p-inner">
+        <h2 class="c-gridContents_heading c-sectionHeading">なんかコンテンツリスト</h2>
+        <ul class="c-gridContents_list">
+          {
+            photosData.map((photoData) => (
+              <li class="c-gridContents_list_item">
+                <h3 class="c-gridContents_list_term">{photoData.author}</h3>
+                <p class="c-gridContents_list_desc">それっぽい説明テキストがそれなりの長さで入ります。</p>
+                <p class="c-gridContents_list_thumb">
+                  <img src={photoData.download_url} decoding="async" alt="" width="5000" height="3333" class="c-gridContents_list_thumb_image" />
+                </p>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+
+    <section class="c-otherSample c-sectionWrap">
+      <div class="c-otherSample_inner p-inner">
+        <h2 class="c-otherSample_heading c-sectionHeading">他のサンプルを見る</h2>
+        <ul class="c-otherSample_list">
+          <li class="c-otherSample_list_item">
+            <a href="#" class="c-otherSample_list_link">
+              <h3 class="c-otherSample_list_term">○○型レイアウト</h3>
+              <p class="c-otherSample_list_desc">○○型レイアウトのポイントは○○であることです。...</p>
+              <div class="c-otherSample_list_tags">
+                <ul class="c-otherSample_tags">
+                  <li class="c-otherSample_tags_item">#PC向け</li>
+                  <li class="c-otherSample_tags_item">#画面が大きいとき向け</li>
+                </ul>
+              </div>
+            </a>
+          </li>
+          <li class="c-otherSample_list_item">
+            <a href="#" class="c-otherSample_list_link">
+              <h3 class="c-otherSample_list_term">○○型レイアウト</h3>
+              <p class="c-otherSample_list_desc">○○型レイアウトのポイントは○○であることです。...</p>
+              <div class="c-otherSample_list_tags">
+                <ul class="c-otherSample_tags">
+                  <li class="c-otherSample_tags_item">#PC向け</li>
+                  <li class="c-otherSample_tags_item">#画面が大きいとき向け</li>
+                </ul>
+              </div>
+            </a>
+          </li>
+          <li class="c-otherSample_list_item">
+            <a href="#" class="c-otherSample_list_link">
+              <h3 class="c-otherSample_list_term">○○型レイアウト</h3>
+              <p class="c-otherSample_list_desc">○○型レイアウトのポイントは○○であることです。...</p>
+              <div class="c-otherSample_list_tags">
+                <ul class="c-otherSample_tags">
+                  <li class="c-otherSample_tags_item">#PC向け</li>
+                  <li class="c-otherSample_tags_item">#画面が大きいとき向け</li>
+                </ul>
+              </div>
+            </a>
+          </li>
+          <li class="c-otherSample_list_item">
+            <a href="#" class="c-otherSample_list_link">
+              <h3 class="c-otherSample_list_term">○○型レイアウト</h3>
+              <p class="c-otherSample_list_desc">○○型レイアウトのポイントは○○であることです。...</p>
+              <div class="c-otherSample_list_tags">
+                <ul class="c-otherSample_tags">
+                  <li class="c-otherSample_tags_item">#PC向け</li>
+                  <li class="c-otherSample_tags_item">#画面が大きいとき向け</li>
+                </ul>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="l-footer">
+      <div class="l-footer_inner p-inner">
+        <p class="l-footer_logo">レイアウトサンプル集</p>
+        <p class="l-footer_text">このページは社内向け資料のサンプルとして作られました。<br />ご不明な点は思い当たる担当者までお問い合わせください。</p>
+        <ul class="l-footer_menu">
+          <li class="l-footer_menu_item"><a href="#" class="l-footer_menu_button">サブメニュー1</a></li>
+          <li class="l-footer_menu_item"><a href="#" class="l-footer_menu_button">サブメニュー2</a></li>
+          <li class="l-footer_menu_item"><a href="#" class="l-footer_menu_button">サブメニュー3</a></li>
+          <li class="l-footer_menu_item"><a href="#" class="l-footer_menu_button">サブメニュー4</a></li>
+          <li class="l-footer_menu_item"><a href="#" class="l-footer_menu_button">サブメニュー5</a></li>
+          <li class="l-footer_menu_item"><a href="#" class="l-footer_menu_button">サブメニュー6</a></li>
+        </ul>
+      </div>
+      <p class="l-footer_copyright">Copyright &copy; Sample Example Co., All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

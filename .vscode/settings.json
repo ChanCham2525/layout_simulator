@@ -1,0 +1,11 @@
+{
+  "css.validate": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "less.validate": false,
+  "scss.validate": false,
+  "stylelint.configFile": "./.stylelintrc",
+  "stylelint.enable": true,
+  "stylelint.snippet": ["css", "less", "postcss", "scss", "sass"],
+  "stylelint.validate": ["css", "scss"],
+  "prettier.ignorePath": ".stylelintignore"
+}

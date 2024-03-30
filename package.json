@@ -1,0 +1,23 @@
+{
+  "name": "layout_simulator",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "prelint:sass": "prettier ./**/*.css --write --ignore-path ./.stylelintignore",
+    "lint:sass": "stylelint ./**/*.css --fix",
+    "postlint:sass": "stylelint ./**/*.css"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "sass": "^1.72.0",
+    "stylelint": "^16.3.0",
+    "stylelint-config-recess-order": "^5.0.0",
+    "stylelint-config-standard-scss": "^13.0.0"
+  },
+  "dependencies": {
+    "astro": "^4.5.9"
+  }
+}

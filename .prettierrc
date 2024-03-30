@@ -1,0 +1,19 @@
+{
+  "endOfLine": "lf",
+  "singleQuote": true,
+  "printWidth": 9999,
+  "overrides": [
+    {
+      "files": "*.css",
+      "options": {
+        "singleQuote": false
+      }
+    },
+    {
+      "files": "*.html",
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
+}

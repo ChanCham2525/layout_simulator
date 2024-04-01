@@ -1,0 +1,32 @@
+body {
+  min-width: 980px;
+}
+
+.p-inner {
+  width: 980px;
+  margin-inline: auto;
+}
+
+.p-control {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 10000;
+}
+
+.p-control_form {
+  padding: 30px;
+  background: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0 0 0 / 30%);
+}
+
+.p-control_input {
+  width: 100px;
+  height: 40px;
+  padding-inline: 8px;
+  text-align: right;
+  background: #fff;
+  border: 1px solid #ccc;
+}

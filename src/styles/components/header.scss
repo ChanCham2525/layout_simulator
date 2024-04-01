@@ -1,0 +1,43 @@
+body {
+  padding-top: 60px;
+}
+
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0 0 0 / 30%);
+}
+
+.l-header_inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.l-header_logo {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+.l-header_globalMenu {
+  display: flex;
+}
+
+.l-header_globalMenu_button {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding-inline: 20px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  transition: 0.2s background;
+
+  &:hover {
+    background: #f7f7f7;
+  }
+}

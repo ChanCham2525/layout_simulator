@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContentsSample from '../components/contentsSample.astro';
+import '../styles/pages/fullscreen.scss';
+
+const pageData = {
+  title: 'フルスクリーン型レイアウト',
+  descriptions: ['このページはフルスクリーン型レイアウトのサンプルです。', 'フルスクリーン型レイアウトのポイントはコンテンツが画面いっぱいにレイアウトされることです。', '○○であることがメリットである一方で、○○であるデメリットも存在します。'],
+};
+---
+
+<BaseLayout pageData={pageData}>
+  <ContentsSample pageData={pageData} />
+</BaseLayout>

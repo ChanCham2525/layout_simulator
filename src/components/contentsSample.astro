@@ -54,18 +54,16 @@ import image987 from '../images/987-1920x500.webp'; // https://fastly.picsum.pho
     </div>
     <script>
       import Splide from '@splidejs/splide';
-      window.addEventListener('load', () => {
-        new Splide('#mainVisualSplide', {
-          type: 'fade',
-          speed: 800,
-          rewind: true,
-          arrows: false,
-          pagination: false,
-          easing: 'ease-out',
-          autoplay: true,
-          interval: 3200,
-        }).mount();
-      });
+      new Splide('#mainVisualSplide', {
+        type: 'fade',
+        speed: 800,
+        rewind: true,
+        arrows: false,
+        pagination: false,
+        easing: 'ease-out',
+        autoplay: true,
+        interval: 3200,
+      }).mount();
     </script>
   </div>
 </div>

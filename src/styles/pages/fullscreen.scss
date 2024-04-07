@@ -1,3 +1,5 @@
+@use '../global/index' as *;
+
 .p-inner {
-  padding-inline: 40px;
+  padding-inline: px(40);
 }

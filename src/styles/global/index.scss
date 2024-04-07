@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+/* function
+------------------------------------------------------------ */
+@function px($pixels) {
+  @return calc($pixels * var(--base-pixel));
+}
+
+/* base size
+------------------------------------------------------------ */
+:root {
+  --base-pixel: 1px;
+}
+
+body {
+  font-size: px(16);
+}

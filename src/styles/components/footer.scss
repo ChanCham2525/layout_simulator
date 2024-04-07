@@ -1,5 +1,8 @@
+@charset "UTF-8";
+@use '../global/index' as *;
+
 .l-footer {
-  padding-top: 80px;
+  padding-top: px(80);
   color: #ddd;
   background: #0e0e16;
 }
@@ -7,34 +10,34 @@
 .l-footer_inner {
   display: grid;
   grid-template-areas: 'logo menu' 'description menu';
-  grid-template-columns: auto 440px;
-  gap: 0 80px;
+  grid-template-columns: auto px(440);
+  gap: 0 px(80);
 }
 
 .l-footer_logo {
   grid-area: logo;
-  margin-bottom: 24px;
-  font-size: 24px;
+  margin-bottom: px(24);
+  font-size: px(24);
   font-weight: bold;
   letter-spacing: 0.05em;
 }
 
 .l-footer_text {
   grid-area: description;
-  font-size: 14px;
+  font-size: px(14);
 }
 
 .l-footer_menu {
   display: grid;
   grid-area: menu;
   grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  gap: px(12);
   align-content: start;
 }
 
 .l-footer_menu_button {
   display: block;
-  padding: 8px 12px;
+  padding: px(8) px(12);
   transition: 0.2s background;
 
   &:hover {
@@ -44,9 +47,9 @@
 
 .l-footer_copyright {
   grid-area: copyright;
-  padding-block: 20px;
-  margin-top: 80px;
-  font-size: 12px;
+  padding-block: px(20);
+  margin-top: px(80);
+  font-size: px(12);
   text-align: center;
   letter-spacing: 0.1em;
   border-top: 1px solid #808080;

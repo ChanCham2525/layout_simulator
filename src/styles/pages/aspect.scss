@@ -1,12 +1,12 @@
 @use '../global/index' as *;
 
-body {
-  min-width: px(980);
+:root {
+  --canvas-size: 980;
+  --base-pixel: calc(100vw / var(--canvas-size));
 }
 
 .p-inner {
-  width: px(980);
-  margin-inline: auto;
+  padding-inline: px(40);
 }
 
 .p-control {
@@ -14,6 +14,7 @@ body {
   right: 30px;
   bottom: 30px;
   z-index: 10000;
+  font-size: 16px;
 }
 
 .p-control_form {

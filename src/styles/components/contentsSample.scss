@@ -1,20 +1,21 @@
 @charset "UTF-8";
+@use '../global/index' as *;
 
 /* general purpose
 ------------------------------------------------------------ */
 .c-sectionWrap {
-  padding-block: 80px;
+  padding-block: px(80);
   background-image: linear-gradient(to bottom, rgba(247 247 250 / 0%), rgba(247 247 250 / 60%));
   background-repeat: no-repeat;
   background-position: center bottom;
-  background-size: 100% 150px;
+  background-size: 100% px(150);
 }
 
 .c-sectionHeading {
   position: relative;
-  padding-bottom: 24px;
-  margin-bottom: 40px;
-  font-size: 24px;
+  padding-bottom: px(24);
+  margin-bottom: px(40);
+  font-size: px(24);
   font-weight: bold;
   text-align: center;
 
@@ -23,8 +24,8 @@
     bottom: 0;
     left: 50%;
     display: block;
-    width: 24px;
-    height: 2px;
+    width: px(24);
+    height: px(2);
     content: '';
     background: #d8d8d8;
     translate: -50% 0;
@@ -33,7 +34,7 @@
 
 /* main visual
 ------------------------------------------------------------ */
-$height-main-visual: 500px;
+$height-main-visual: px(500);
 
 .c-mainVisual {
   position: relative;
@@ -53,16 +54,16 @@ $height-main-visual: 500px;
 }
 
 .c-mainVisual_title {
-  font-size: 40px;
+  font-size: px(40);
   font-weight: bold;
-  text-shadow: 0 0 8px rgb(0 0 0 / 45%);
+  text-shadow: 0 0 px(8) rgb(0 0 0 / 45%);
   letter-spacing: 0.1em;
 }
 
 .c-mainVisual_sub {
-  margin-top: 16px;
-  font-size: 18px;
-  text-shadow: 0 0 5px rgb(0 0 0 / 60%);
+  margin-top: px(16);
+  font-size: px(18);
+  text-shadow: 0 0 px(5) rgb(0 0 0 / 60%);
   letter-spacing: 0.1em;
 }
 
@@ -86,7 +87,7 @@ $height-main-visual: 500px;
 .c-lead_text {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: px(8);
   text-align: center;
 }
 
@@ -94,12 +95,11 @@ $height-main-visual: 500px;
 ------------------------------------------------------------ */
 .c-description_content {
   display: flex;
-  gap: 40px;
-  align-items: c;
+  gap: px(40);
 }
 
 .c-description_figure {
-  flex: 0 0 400px;
+  flex: 0 0 min(px(400), 50% - (20 * var(--base-pixel)));
 }
 
 .c-description_figure_image {
@@ -112,7 +112,7 @@ $height-main-visual: 500px;
 .c-description_text {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: px(8);
 }
 
 /* grid contents
@@ -120,7 +120,7 @@ $height-main-visual: 500px;
 .c-gridContents_list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px 20px;
+  gap: px(40) px(20);
 }
 
 .c-gridContents_list_item {
@@ -129,13 +129,13 @@ $height-main-visual: 500px;
 }
 
 .c-gridContents_list_term {
-  margin-bottom: 4px;
+  margin-bottom: px(4);
   font-weight: bold;
 }
 
 .c-gridContents_list_thumb {
   order: -1;
-  margin-bottom: 8px;
+  margin-bottom: px(8);
 }
 
 .c-gridContents_list_thumb_image {
@@ -151,16 +151,16 @@ $height-main-visual: 500px;
 .c-otherSample_list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: px(20);
 }
 
 .c-otherSample_list_link {
   position: relative;
   display: block;
-  padding: 20px;
-  padding-right: 80px;
+  padding: px(20);
+  padding-right: px(80);
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: px(4);
   transition: 0.2s background;
 
   &:hover {
@@ -172,11 +172,11 @@ $height-main-visual: 500px;
 
     position: absolute;
     top: 50%;
-    right: 35px;
+    right: px(35);
     z-index: 2;
     display: block;
-    width: 12px;
-    height: 12px;
+    width: px(12);
+    height: px(12);
     clip-path: polygon(0 0, 100% 0, 100% var(--arrow-width), var(--arrow-width) var(--arrow-width), var(--arrow-width) 100%, 0 100%);
     content: '';
     background: #1e1e1e;
@@ -187,11 +187,11 @@ $height-main-visual: 500px;
   &::after {
     position: absolute;
     top: 50%;
-    right: 20px;
+    right: px(20);
     z-index: 1;
     display: block;
-    width: 40px;
-    height: 40px;
+    width: px(40);
+    height: px(40);
     clip-path: circle(50%);
     content: '';
     background: #fff;
@@ -200,15 +200,15 @@ $height-main-visual: 500px;
 }
 
 .c-otherSample_list_term {
-  font-size: 18px;
+  font-size: px(18);
   font-weight: bold;
 }
 
 .c-otherSample_tags {
   display: flex;
-  gap: 8px;
-  margin-top: 8px;
-  font-size: 12px;
+  gap: px(8);
+  margin-top: px(8);
+  font-size: px(12);
   font-weight: bold;
   color: #2978f3;
 }

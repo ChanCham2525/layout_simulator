@@ -103,6 +103,7 @@ $height-main-visual: 500px;
 }
 
 .c-description_figure_image {
+  display: block;
   width: 100%;
   height: auto;
   aspect-ratio: 4 / 3;
@@ -138,6 +139,7 @@ $height-main-visual: 500px;
 }
 
 .c-gridContents_list_thumb_image {
+  display: block;
   width: 100%;
   height: auto;
   aspect-ratio: 1;

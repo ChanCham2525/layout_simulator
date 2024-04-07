@@ -1,7 +1,7 @@
 ---
-import { Image } from 'astro:assets';
-import image1020 from '../images/1020-1920x500.webp'; // https://fastly.picsum.photos/id/1020/1920/720.webp?hmac=wZJv9gGi41oFdAA-2-yaJCZTabX0C1RLfYygS7SAJE8
-// import MainVisual from './mainVisual.astro';
+// import { Image } from 'astro:assets';
+// import image1020 from '../images/1020-1920x500.webp'; // https://fastly.picsum.photos/id/1020/1920/720.webp?hmac=wZJv9gGi41oFdAA-2-yaJCZTabX0C1RLfYygS7SAJE8
+import MainVisual from './mainVisual.astro';
 import '../styles/components/contentsSample.scss';
 
 const { pageData } = Astro.props;
@@ -31,7 +31,7 @@ const photosData = await fetch('https://picsum.photos/v2/list?limit=8&page=18').
     </script>
   </div>
   <div class="c-mainVisual_background">
-    <Image src={image1020} decoding="sync" alt="" class="c-mainVisual_background_image" />
+    <MainVisual />
   </div>
 </div>
 
